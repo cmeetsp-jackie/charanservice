@@ -243,6 +243,44 @@
             justify-content: center;
         }
 
+        .bulk-upload-notice {
+            margin-top: 32px;
+            padding: 20px 24px;
+            background: rgba(113, 91, 167, 0.06);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .bulk-upload-notice p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .bulk-upload-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .bulk-upload-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(113, 91, 167, 0.25);
+        }
+
         .app-btn {
             display: flex;
             align-items: center;
@@ -281,14 +319,19 @@
             font-weight: 600;
         }
 
+        .brand-message-section {
+            padding: 80px 24px;
+            background: var(--primary-subtle);
+            text-align: center;
+        }
+
         .brand-message {
-            margin-top: 36px;
             text-align: center;
         }
 
         .brand-message p {
             font-family: 'Nanum Pen Script', cursive;
-            font-size: clamp(26px, 3.2vw, 36px);
+            font-size: clamp(28px, 3.5vw, 40px);
             font-weight: 400;
             color: #555;
             line-height: 1.9;
@@ -1532,6 +1575,146 @@
             }
         }
 
+        /* Bulk Form Section */
+        .bulk-form-section {
+            padding: 100px 24px;
+            background: var(--white);
+        }
+
+        .form-description {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 48px;
+            margin-top: -40px;
+        }
+
+        .bulk-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .form-group label .required {
+            color: #e74c3c;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(113, 91, 167, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-agreement {
+            margin: 24px 0;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .agreement-text .required {
+            color: #e74c3c;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 18px 32px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(113, 91, 167, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .bulk-form {
+                padding: 24px;
+            }
+        }
+
         /* Footer */
         footer {
             padding: 60px 24px 40px;
@@ -1732,13 +1915,11 @@
                     </a>
                 </div>
                 
-                <div class="brand-message">
-                    <p>나의 추억이 누군가의 설렘이 되고</p>
-                    <p>나의 설렘이 지속가능성을 만드는 순간</p>
+                <div class="bulk-upload-notice">
+                    <p>빈티지숍이나 대형 셀러분들을 위한 대량 업로드 서비스도 준비되어 있어요.<br>아래에서 신청해 주시면 담당자가 직접 연락드릴게요.</p>
+                    <a href="#bulk-form" class="bulk-upload-btn">📦 상품 대량업로드 신청</a>
                 </div>
             </div>
-
-            <!-- 오른쪽: 판매자 앱 (마켓관리) -->
             <div class="phone-mockup-container right-phone">
                 <div class="phone-frame right">
                     <div class="phone-screen">
@@ -1939,6 +2120,13 @@
                     <div class="solution-icon">🚚</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="brand-message-section">
+        <div class="brand-message">
+            <p>나의 추억이 누군가의 설렘이 되고</p>
+            <p>나의 설렘이 지속가능성을 만드는 순간</p>
         </div>
     </section>
 
@@ -2157,6 +2345,78 @@
         </div>
     </section>
 
+    <section class="bulk-form-section" id="bulk-form">
+        <div class="container">
+            <span class="section-label">Partnership</span>
+            <h2 class="section-title">상품 대량업로드 신청</h2>
+            <p class="form-description">빈티지숍, 대형 셀러분들을 위한 맞춤 서비스입니다.<br>아래 정보를 입력해 주시면 담당자가 빠르게 연락드릴게요.</p>
+            
+            <form class="bulk-form" id="bulkUploadForm" action="https://formspree.io/f/mzdroyal" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">이름 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="홍길동" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">연락처 <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">이메일 <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business">상호명/사업자명</label>
+                        <input type="text" id="business" name="business" placeholder="(선택) 회사명 또는 상호">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity">예상 상품 수량</label>
+                        <select id="quantity" name="quantity">
+                            <option value="">선택해주세요</option>
+                            <option value="50-100">50 ~ 100개</option>
+                            <option value="100-300">100 ~ 300개</option>
+                            <option value="300-500">300 ~ 500개</option>
+                            <option value="500+">500개 이상</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">주요 취급 카테고리</label>
+                        <select id="category" name="category">
+                            <option value="">선택해주세요</option>
+                            <option value="women">여성의류</option>
+                            <option value="men">남성의류</option>
+                            <option value="kids">유아동</option>
+                            <option value="luxury">명품/디자이너</option>
+                            <option value="vintage">빈티지</option>
+                            <option value="mixed">복합</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">추가 문의사항</label>
+                    <textarea id="message" name="message" rows="4" placeholder="궁금하신 점이나 요청사항을 자유롭게 작성해주세요."></textarea>
+                </div>
+                
+                <div class="form-agreement">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <span class="checkmark"></span>
+                        <span class="agreement-text">개인정보 수집 및 이용에 동의합니다. <span class="required">*</span></span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="form-submit-btn">📦 대량업로드 신청하기</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-info">
             <p><strong>대표자:</strong> 김혜성</p>
@@ -2165,8 +2425,8 @@
             <p><strong>통신판매업 신고번호:</strong> 제2022-서울성동-00830호</p>
             <p><strong>주소:</strong> 서울특별시 성동구 아차산로 38, 9층(성수동 1가, 개풍빌딩)</p>
             <p><strong>문의전화:</strong> 02-6013-2201</p>
-            <p><strong>이메일:</strong> support@mineis.io</p>
-            <p><strong>개인정보관리책임자:</strong> 최민기(privacy@mineis.io)</p>
+            <p><strong>이메일:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ae9efeaeaf5e8eedaf7f3f4fff3e9b4f3f5">[email&#160;protected]</a></p>
+            <p><strong>개인정보관리책임자:</strong> 최민기(<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d6d6f746b7c7e645d70747378746e337472">[email&#160;protected]</a>)</p>
         </div>
         <p class="footer-copyright">Copyright Ⓒ Mine.is Inc. All rights reserved.</p>
     </footer>
@@ -2179,6 +2439,44 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Form submission handler with Formspree
+        document.getElementById('bulkUploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('.form-submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = '신청 중...';
+            submitBtn.disabled = true;
+            
+            // Send to Formspree
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('✅ 신청이 완료되었습니다!\n담당자가 빠른 시일 내에 연락드리겠습니다.');
+                    form.reset();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    throw new Error('전송 실패');
+                }
+            })
+            .catch(error => {
+                alert('❌ 신청 중 오류가 발생했습니다.\n다시 시도해주세요.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             });
         });
     </script>
