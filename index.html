@@ -1098,25 +1098,191 @@
                 order: 1;
             }
 
-            .phone-mockups-row {
-                display: flex;
-                gap: 24px;
-                order: 2;
-            }
-
             .phone-mockup-container.left-phone,
             .phone-mockup-container.right-phone {
-                order: unset;
+                display: none;
             }
 
             .phone-frame {
                 width: 220px;
             }
+
+            .letters-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 12px 16px;
+            }
+
+            .nav-cta {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 100px 16px 60px;
+            }
+
+            .hero-badge {
+                font-size: 11px;
+                padding: 8px 14px;
+                margin-bottom: 20px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                margin-bottom: 16px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+                margin-bottom: 28px;
+            }
+
+            .app-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .app-btn {
+                width: 100%;
+                max-width: 220px;
+                justify-content: center;
+            }
+
+            .bulk-upload-notice {
+                margin-top: 24px;
+                padding: 16px;
+            }
+
+            .bulk-upload-notice p {
+                font-size: 13px;
+            }
+
+            .bulk-upload-btn {
+                padding: 10px 20px;
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .user-count {
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+
+            .user-count strong {
+                font-size: 13px;
+            }
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+
+            .problem-section,
+            .solution-section,
+            .founder-section,
+            .reviews-section,
+            .bulk-form-section {
+                padding: 60px 16px;
+            }
+
+            .problem-card {
+                padding: 24px;
+            }
+
+            .problem-card h3 {
+                font-size: 18px;
+            }
+
+            .problem-card p {
+                font-size: 15px;
+            }
+
+            .problem-card .quote {
+                font-size: 14px;
+                padding: 16px;
+            }
+
+            .solution-card {
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .solution-number {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .solution-content h3 {
+                font-size: 16px;
+            }
+
+            .solution-content p {
+                font-size: 14px;
+            }
+
+            .solution-icon {
+                font-size: 24px;
+            }
+
+            .brand-message-section {
+                padding: 50px 16px;
+            }
+
+            .brand-message p {
+                font-size: 22px;
+            }
+
+            .letter-card {
+                padding: 24px;
+            }
+
+            .letter-content h3 {
+                font-size: 18px;
+            }
+
+            .letter-content p {
+                font-size: 14px;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-card {
+                padding: 20px;
+            }
+
+            .branding-section {
+                padding: 40px 16px;
+            }
+
+            .branding-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .branding-item.main-visual {
+                grid-column: span 1;
+                min-height: 250px;
+            }
+
+            .form-description {
+                font-size: 14px;
+                margin-top: -30px;
+                margin-bottom: 30px;
+            }
         }
 
         @media (max-width: 600px) {
             .hero {
-                padding: 120px 20px 60px;
+                padding: 90px 16px 50px;
             }
 
             .phone-mockups-row {
@@ -1126,6 +1292,18 @@
 
             .phone-frame {
                 width: 260px;
+            }
+
+            .logo-stack {
+                gap: 2px;
+            }
+
+            .re-logo img {
+                height: 16px;
+            }
+
+            .logo img {
+                height: 20px;
             }
         }
 
@@ -1711,7 +1889,23 @@
             }
 
             .bulk-form {
-                padding: 24px;
+                padding: 20px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 12px 14px;
+                font-size: 16px; /* iOS zoom 방지 */
+            }
+
+            .form-submit-btn {
+                padding: 16px 24px;
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 22px;
             }
         }
 
